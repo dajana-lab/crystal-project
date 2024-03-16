@@ -1,3 +1,13 @@
+/* styles.css */
+
+/* Resetiranje osnovnih stilova */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Postavljanje osnovnih stilova za tijelo dokumenta */
 body {
   background: radial-gradient(
     1224px at 10.6% 8.8%,
@@ -6,24 +16,33 @@ body {
   );
   font-family: "Playfair Display", serif;
 }
+
+/* Stilizacija glavnih naslova */
 h1 {
   text-align: center;
   font-size: 50px;
   color: #1345b7;
+  margin-bottom: 20px;
 }
+
 h2 {
   text-align: center;
   font-size: 35px;
   color: #5e227f;
   padding: 15px;
 }
+
+/* Stilizacija paragrafa */
 p {
   text-align: center;
   line-height: 1.5;
   color: #5e227f;
   font-size: 17px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
+
+/* Stilizacija linkova */
 a {
   text-decoration: none;
   color: #1345b7;
@@ -31,6 +50,11 @@ a {
   opacity: 0.7;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Stilizacija gumba */
 button {
   display: block;
   margin: 15px auto;
@@ -43,14 +67,17 @@ button {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
+
 button:hover {
   cursor: pointer;
   background-color: #5e227f;
   color: #f2f4fb;
   border: 2px solid #5e227f;
 }
+
+/* Stilizacija containera */
 .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 50px auto;
   border: 1px solid white;
   border-radius: 10px;
@@ -58,37 +85,45 @@ button:hover {
   background-color: #defcf9;
 }
 
+/* Stilizacija footer-a */
 .design {
   color: #5e227f;
   font-size: 14px;
   padding: 30px;
   text-align: center;
 }
+
+/* Stilizacija slika u galeriji kristala */
 .crystals {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 5px 0;
-  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
+
 .crystals img {
-  width: 140px;
-  margin: 15px 0;
+  width: 100%;
   border-radius: 6px;
   transition: all 200ms ease-in-out;
 }
+
 .crystals img:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
+
+/* Stilizacija glavne slike */
 .main-picture {
-  max-width: 400px;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
   border-radius: 6px;
   transition: all 200ms ease-in-out;
 }
+
 .main-picture:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
+
+/* Dodatni stilovi za tamni gumb */
 .dark-button {
   background: radial-gradient(
     circle at 74.2% 50.9%,
